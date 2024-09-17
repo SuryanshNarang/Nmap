@@ -31,3 +31,8 @@ Nmap version:  (7, 91)
 IP Status:  up
 ['tcp']
 The open ports are going to be:  dict_keys([22, 80, 443])
+
+## Additional Information:
+- **Nmap Version:** The tool uses Nmap version 7.91 in this example.
+- **IP Status:** The target IP address is active (`up`).
+- **Open Ports:** The scan identified TCP ports 22, 80, and 443 as open on the target system.
