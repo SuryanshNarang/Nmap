@@ -13,26 +13,21 @@ Welcome to my Nmap automation tool! This tool simplifies network scanning using 
 3. **View Results:** Detailed results include open ports, detected protocols, and IP status.
 
 ## Example Usage:
-```python
-import nmap
+```bash
+Welcome, this is a simple nmap automation tool developed by Suryansh Narang
+<------------------------------------------------------------------------>
 
-scanner = nmap.PortScanner()
-ip_address = input('Enter the IP address you want to scan: ')
-resp = input("""\nPlease enter the type of scan you want to run:
+Enter the IP address you want to scan: 192.168.1.1
+The IP address you entered is 192.168.1.1
+
+Please enter the type of scan you want to run:
                 1) SYN ACK Scan
                 2) UDP Scan
                 3) Comprehensive Scan
-                Your choice: """)
-
-if resp == '1':
-    scanner.scan(ip_address, '1-1024', '-v -sS')
-    print("Open TCP Ports:", scanner[ip_address]['tcp'].keys())
-elif resp == '2':
-    scanner.scan(ip_address, '1-1024', '-v -sU')
-    print("Open UDP Ports:", scanner[ip_address]['udp'].keys())
-elif resp == '3':
-    scanner.scan(ip_address, '1-1024', '-v -sS -sV -sC -A -O')
-    print("Open TCP Ports:", scanner[ip_address]['tcp'].keys())
-else:
-    print('Please enter a valid option')
-
+                Your choice: 1
+You have selected the option:  1
+Nmap version:  (7, 91)
+{'tcp': {'method': 'syn', 'services': '1-1024'}}
+IP Status:  up
+['tcp']
+The open ports are going to be:  dict_keys([22, 80, 443])
